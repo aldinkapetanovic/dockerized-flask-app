@@ -9,12 +9,12 @@ This Docker Compose configuration defines two services, Flask and Nginx, and a c
 
 #### Flask
 - **Build**: Builds the Docker image from the local directory.
-- **Ports**: Maps port 8001 on the host to port 8000 in the container.
+- **Ports**: Maps port 8000 (or random) on the host to port 8000 in the container.
 - **Networks**: Connects to the `mynetwork` network.
 
 #### Nginx
 - **Image**: Uses the latest Nginx image from Docker Hub.
-- **Ports**: Maps port 80 on the host to port 80 in the container.
+- **Ports**: Maps port 80 (or random) on the host to port 80 in the container.
 - **Volumes**: Mounts the local `nginx.conf` file to `/etc/nginx/nginx.conf` in the container.
 - **Networks**: Connects to the `mynetwork` network.
 - **Depends_on**: Specifies that the Nginx service depends on the Flask service.
