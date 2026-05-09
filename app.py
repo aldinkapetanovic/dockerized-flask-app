@@ -8,7 +8,6 @@ app = Flask(__name__)
 def hello():
     hostname = socket.gethostname()
     python_version = sys.version.split()[0]
-    # client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
     return f'''
     <!DOCTYPE html>
     <html lang="en">
@@ -55,7 +54,6 @@ def hello():
             <h1>Hello from Flask</h1>
             <p>Hostname: <span class="highlight">{hostname}</span></p>
             <p>Python version: <span class="highlight">{python_version}</span></p>
-            <!-- <p>Client IP: <span class="highlight">{client_ip}</span></p> -->
             <p>Try <code>/items</code> to see JSON API output.</p>
         </div>
     </body>
